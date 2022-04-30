@@ -1,0 +1,38 @@
+.title-container{
+    margin-top: 80px;
+}
+.web-title{
+    font-size: 50px;
+    font-weight: bold;
+}
+.show-container{
+    text-align: right;
+}
+.show-img{
+    height: 500px;
+    width: 400px;
+    text-align: right;
+}
+.description-container p{
+ font-size: 17px;
+ line-height: 25px;
+}
+.button-design{
+    padding: 10px 15px;
+    background-color: rgb(233, 245, 255);
+    border-radius: 3px;
+    border: none;
+    color: navy;
+    font-size: 20px;
+}
+.review-button a{
+    text-decoration: none;
+    border: 1px solid goldenrod;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(176, 118, 3);
+    color: white;
+    font-size: 15px;
+  
+}
