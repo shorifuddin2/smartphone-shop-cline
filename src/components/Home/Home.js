@@ -20,10 +20,7 @@ const Home = () => {
                 src="https://i.ibb.co/0mLMyYL/banner-2.png"
                 alt="First slide"
                 />
-                <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+                
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -38,26 +35,11 @@ const Home = () => {
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-        
-           
-
-
-
-
 <Container>
 
 
-               <Row>
-                   <Col md='7' sm='12'>
-                       
-                       
-                       
-                           
-                   </Col>
-                   <Col md='5' sm='12'>
-                       
-                   </Col>
-               </Row>
+              
+                
                <Row>
                  <h2 className='web-title text-primary text-center py-5'>Client review</h2>
                    <Cart></Cart>

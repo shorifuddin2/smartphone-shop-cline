@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Rechart from './components/Rechart/Rechart';
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <div>
        <Header></Header>
-      
+      <Container>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home'element={<Home></Home>}></Route>
@@ -24,7 +25,8 @@ const App = () => {
         <Route path='/review' element={<Reviews></Reviews>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
-      
+      </Container>
+      <Footer></Footer>
     </div>
   )
   }
