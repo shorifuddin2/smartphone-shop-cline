@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CustomLink from '../CustomLink/CustomLink';
 import './Header.css';
 // this is head
 const Header = () => {
+  const [registered, setRegistered] = useState(false)
     return (
         <div>
             <Navbar bg="info" expand="lg">
@@ -21,7 +22,7 @@ const Header = () => {
         <CustomLink className="link" to='/review'>Reviews</CustomLink>
         <CustomLink className="link" to='/dashboard'>Dashboard</CustomLink>
         <CustomLink className="link" to='/blog'>Blog</CustomLink>
-        <CustomLink className="link" to='/login'>Login</CustomLink>
+        <CustomLink className="link" to='/login'>{registered ?'Login' : 'Logout'}</CustomLink>
         
         
       </Nav>
