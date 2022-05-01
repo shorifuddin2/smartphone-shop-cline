@@ -129,7 +129,7 @@ const Login = () => {
     
     return (
         <div className='container'>
-            <div className='w-50 md:w-100 my-5 mx-auto Larger shadow rounded-3'>
+            <div className=' md:w-100 my-5 mx-auto Larger shadow rounded-3'>
                 <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
                     <h2 className="text-center  p-3">Please {registered ?'Login' : 'Register'} !!</h2>
                     <Form.Group className="mb-3 px-5" controlId="formBasicEmail">
@@ -151,12 +151,12 @@ const Login = () => {
                     <Form.Group className="d-flex px-5" controlId="formBasicCheckbox">
                         <Form.Check onChange={handleRegisterChange} type="checkbox" label="Already Register" />
 
-                        <Button onChange={handleResetPassword} variant="link">Forget Password?</Button>
+                        <Button onChange={handleResetPassword} variant="link mt-0">Forget Password?</Button>
                     </Form.Group>
-                    <Button variant="primary mx-5 mb-5 px-4" type="submit">
+                    <Button variant="primary ms-5 mb-5  px-4" type="submit">
                         {registered ? 'Login':'Register'}
                     </Button>
-                    <Button onClick={signInGoogle} variant="danger">Google</Button>
+                    <Button onClick={signInGoogle} variant="danger  mb-5 ms-2">Google</Button>
                 </Form>
             </div>
         </div>

@@ -25,7 +25,7 @@ const App = () => {
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
       
-      <Footer></Footer>
+      <Footer className="mb-0"></Footer>
     </div>
   )
   }

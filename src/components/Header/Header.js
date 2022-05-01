@@ -8,7 +8,7 @@ const Header = () => {
   const [registered, setRegistered] = useState(false)
     return (
         <div>
-            <Navbar bg="info" expand="lg">
+            <Navbar bg="success" expand="lg">
   <Container fluid>
     <Navbar.Brand href="#"><Link className="link" to='/home'>Smartphone Show Room</Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -19,10 +19,10 @@ const Header = () => {
         navbarScroll
       >
         <CustomLink className="link" to='/'>Home</CustomLink>
-        <CustomLink className="link" to='/review'>Reviews</CustomLink>
+        <CustomLink className="link" to='/inventory'>Inventory</CustomLink>
         <CustomLink className="link" to='/dashboard'>Dashboard</CustomLink>
         <CustomLink className="link" to='/blog'>Blog</CustomLink>
-        <CustomLink className="link" to='/login'>{registered ?'Login' : 'Logout'}</CustomLink>
+        <CustomLink className="link" to='/login'>{registered ?'Login' : 'Register'}</CustomLink>
         
         
       </Nav>
