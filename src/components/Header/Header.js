@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <Navbar bg="blue" expand="lg">
+            <Navbar bg="info" expand="lg">
   <Container fluid>
     <Navbar.Brand href="#"><Link className="link" to='/home'>Smartphone Show Room</Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -21,7 +21,7 @@ const Header = () => {
         <CustomLink className="link" to='/review'>Reviews</CustomLink>
         <CustomLink className="link" to='/dashboard'>Dashboard</CustomLink>
         <CustomLink className="link" to='/blog'>Blog</CustomLink>
-        <CustomLink className="link" to='/about'>About</CustomLink>
+        <CustomLink className="link" to='/login'>Login</CustomLink>
         
         
       </Nav>
