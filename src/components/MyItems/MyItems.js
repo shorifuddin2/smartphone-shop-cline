@@ -3,9 +3,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseInventory from '../../hooks/UseInventory';
 
-
-const AllInventory = () => {
-    const[inventory,setInventory] = UseInventory();
+const MyItems = () => {
+  
+        const [inventory,setInventory] = UseInventory();
     return (
         <div>
             <Container>
@@ -20,6 +20,7 @@ const AllInventory = () => {
                                  <p>Sold : {product.sold}</p>
                                  <p>Description : {product.description}</p>
                                  <h2>Price : ${product.price}</h2>
+
                                  <div className='text-center my-2 update-button'>
                                 <Link className='p-2 bg-danger text-light' to=''>Delete</Link>
                                 <Link className='p-2 bg-warning' to=''>Delivery</Link>
@@ -35,4 +36,4 @@ const AllInventory = () => {
     );
 };
 
-export default AllInventory;
+export default MyItems;
