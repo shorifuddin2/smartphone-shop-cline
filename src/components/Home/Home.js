@@ -1,10 +1,10 @@
 import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
-import Usereviews from '../../hooks/Usereviews';
+import Usereviews from '../../hooks/UseInventory';
 import './Home.css';
-import img from '../../Image/r15.jpg';
 import Cart from '../Cart/Cart';
 import { Link } from 'react-router-dom';
+import Cart2 from '../Cart/Cart2';
 
 // use hooks
 const Home = () => {
@@ -30,8 +30,6 @@ const Home = () => {
                 />
 
                 <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
@@ -41,15 +39,21 @@ const Home = () => {
               
                 
                <Row>
-                 <h2 className='web-title text-primary text-center py-5'>Client review</h2>
+                 <h2 className='web-title text-primary text-center py-5'>Inventory Items</h2>
                    <Cart></Cart>
                  
                </Row>
               
            </Container>
              <div className='text-center my-5 review-button'>
-             <Link  to='/review'>See All Reviews</Link>
+             <Link  to='/inventory'>See All Inventory</Link>
              </div>
+
+             <Row>
+                 <h2 className='web-title text-primary text-center py-5'>Product Items</h2>
+                   <Cart2></Cart2>
+                 
+               </Row>
         </div>
     );
 };

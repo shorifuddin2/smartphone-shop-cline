@@ -10,7 +10,7 @@ const Header = () => {
         <div>
             <Navbar bg="success" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="#"><Link className="link" to='/home'>Smartphone Show Room</Link></Navbar.Brand>
+    <Navbar.Brand ><Link className="link text-warning" to='/home'>Smartphone Show Room</Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -20,7 +20,7 @@ const Header = () => {
       >
         <CustomLink className="link" to='/'>Home</CustomLink>
         <CustomLink className="link" to='/inventory'>Inventory</CustomLink>
-        <CustomLink className="link" to='/dashboard'>Dashboard</CustomLink>
+        <CustomLink className="link" to='/delivery'>Delivery</CustomLink>
         <CustomLink className="link" to='/blog'>Blog</CustomLink>
         <CustomLink className="link" to='/login'>{registered ?'Login' : 'Register'}</CustomLink>
         

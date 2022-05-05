@@ -6,8 +6,8 @@ import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Rechart from './components/Rechart/Rechart';
-import Reviews from './components/Reviews/Reviews';
+import Delivery from './components/Delivery/Delivery';
+import Inventory from './components/Inventory/Inventory';
 
 const App = () => {
   // app
@@ -18,10 +18,10 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home'element={<Home></Home>}></Route>
-        <Route path='/dashboard' element={<Rechart></Rechart>}></Route>
+        <Route path='/delivery' element={<Delivery></Delivery>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/review' element={<Reviews></Reviews>}></Route>
+        <Route path='/inventory' element={<requireAuth><Inventory></Inventory></requireAuth>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
       
