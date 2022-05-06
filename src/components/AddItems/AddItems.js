@@ -12,6 +12,10 @@ const AddItems = () => {
           name: e.target.name.value,
           price: e.target.price.value,
           image: e.target.image.value,
+          Sold: e.target.sold.value,
+          suppler: e.target.suppler.value,
+          Description: e.target.description.value,
+          image: e.target.quantity.value,
         };
     
       const {data}= await axios.post('http://localhost:5000/addItems',product)
@@ -118,7 +122,7 @@ const AddItems = () => {
               </div>
     
               <div className="text-right">
-                <button className="bg-primary px-5 py-2 my-2 rounded-3">Add</button>
+                <Button className="bg-primary px-5 py-2 my-2 rounded-3">Add</Button>
               </div>
             </form>
           </div>

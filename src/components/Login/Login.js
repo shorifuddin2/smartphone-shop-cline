@@ -6,10 +6,6 @@ import Button from 'react-bootstrap/Button';
 import {signInWithEmailAndPassword,  createUserWithEmailAndPassword,getAuth, sendEmailVerification, sendPasswordResetEmail,signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 
 
-
-
-
-
 const auth = getAuth();
 const Login = () => {
     const [validated, setValidated] = useState(false);
@@ -129,7 +125,7 @@ const Login = () => {
     
     return (
         <div className='container'>
-            <div className=' md:w-100 my-5 mx-auto Larger shadow rounded-3'>
+            <div className=' md:w-100 my-5  mx-auto Larger shadow rounded-3'>
                 <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
                     <h2 className="text-center  p-3">Please {registered ?'Login' : 'Register'} !!</h2>
                     <Form.Group className="mb-3 px-5" controlId="formBasicEmail">
@@ -159,6 +155,7 @@ const Login = () => {
                     <Button onClick={signInGoogle} variant="danger  mb-5 ms-2">Google</Button>
                 </Form>
             </div>
+            
         </div>
     );
 };

@@ -9,6 +9,9 @@ import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
 import AddItems from './components/AddItems/AddItems';
 import MyItems from './components/MyItems/MyItems';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import Manage from './components/MyItems/ManageItems/ManageItems';
+import ManageItems from './components/MyItems/ManageItems/ManageItems';
 
 const App = () => {
   // app
@@ -23,11 +26,12 @@ const App = () => {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/myitems' element={<MyItems></MyItems>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/inventory' element={<requireAuth><Inventory></Inventory></requireAuth>}></Route>
-        <Route path='*' element={<Error></Error>}></Route>
+        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+        <Route path='/inventory' element={<ManageItems></ManageItems>}></Route>
+        <Route path='/*' element={<Error></Error>}></Route>
       </Routes>
       
-      <Footer className="mb-0"></Footer>
+      <Footer className=""></Footer>
     </div>
   )
   }

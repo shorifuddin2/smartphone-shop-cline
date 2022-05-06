@@ -6,6 +6,23 @@ import UseInventory from '../../hooks/UseInventory';
 const MyItems = () => {
   
         const [inventory,setInventory] = UseInventory();
+
+        const handleDelete = id =>{
+            const proceed = window.confirm('Are you sure?');
+            if(proceed){
+                const url = `http://localhost:5000/product/${id}`;
+                fetch(url, {
+                    method: 'DELETE'
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = inventory.filter(product => product._id !== id);
+                    setInventory(remaining);
+                })
+            }
+        }
+
     return (
         <div>
             <Container>
@@ -22,7 +39,7 @@ const MyItems = () => {
                                  <h2>Price : ${product.price}</h2>
 
                                  <div className='text-center my-2 update-button'>
-                                <Link className='p-2 bg-danger text-light' to=''>Delete</Link>
+                                <Link className='p-2 bg-danger text-light' to=''onClick={() => handleDelete(product._id)}>Delete</Link>
                                 <Link className='p-2 bg-warning' to=''>Delivery</Link>
                                 </div>
                                 

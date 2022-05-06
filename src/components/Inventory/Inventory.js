@@ -1,20 +1,20 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
-import UseInventory from '../../hooks/UseInventory';
-import AllInventory from '../AllInventory/AllInventory';
+
 
 
 const Inventory = () => {
-    const[Inventory,setInventory] = UseInventory();
+    // const { productId } = useParams();
+    // const [product] = useServiceDetail(productId);
+
     return (
         <div>
-            <Container>
-                <Row>
-                    <AllInventory></AllInventory>
-                </Row>
-            </Container>
+            {/* <h2>You are about to book: {product.name}</h2>
+            <div className='text-center'>
+                <Link to={`/checkout/${productId}`}>
+                    <button className='btn btn-primary'>Update</button>
+                </Link>
+            </div> */}
         </div>
     );
-};
-
+};    
 export default Inventory;

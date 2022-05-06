@@ -22,7 +22,8 @@ const Header = () => {
         <CustomLink className="link" to='/inventory'>Inventory</CustomLink>
         <CustomLink className="link" to='/blog'>Blog</CustomLink>
         <CustomLink className="link" to='/addItems'>AddItems</CustomLink>
-        <CustomLink className="link" to='/myitems'>MyItems</CustomLink>
+        <CustomLink className="link" to='/myItems'>MyItems</CustomLink>
+        <CustomLink className="link" to='/manageItems'>ManageItems</CustomLink>
         <CustomLink className="link" to='/login'>{registered ?'Login' : 'Register'}</CustomLink>
         
         
