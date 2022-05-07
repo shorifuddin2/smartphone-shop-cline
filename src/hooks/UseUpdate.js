@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const UseProductUpdeate = productId =>{
+const UseUpdate = productId =>{
     const [product, setProduct] = useState({});
 
     useEffect( () =>{
@@ -14,4 +14,4 @@ const UseProductUpdeate = productId =>{
     return [product]
 }
 
-export default UseProductUpdeate;
+export default UseUpdate;

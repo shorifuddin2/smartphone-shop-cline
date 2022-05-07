@@ -9,7 +9,8 @@ import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
 import AddItems from './components/AddItems/AddItems';
 import MyItems from './components/MyItems/MyItems';
-import PrivetRoute from './components/PriveteRoute/PrivetRoute';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import Update from './components/Update/Update';
 
 
 const App = () => {
@@ -24,8 +25,9 @@ const App = () => {
         <Route path='/addItems' element={<AddItems></AddItems>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+        <Route path='/update' element={<Update></Update>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+        <Route path='/inventory' element={<RequireAuth><Inventory></Inventory></RequireAuth>}></Route>
         <Route path='/*' element={<Error></Error>}></Route>
       </Routes>
       

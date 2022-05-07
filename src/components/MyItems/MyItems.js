@@ -1,3 +1,4 @@
+import { Button } from 'bootstrap';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -39,9 +40,10 @@ const MyItems = () => {
                                  <h2>Price : ${product.price}</h2>
 
                                  <div className='text-center my-2 update-button'>
-                                <Link className='p-2 bg-danger text-light' to=''onClick={() => handleDelete(product._id)}>Delete</Link>
-                                <Link className='p-2 bg-warning' to=''>Delivery</Link>
+                                <Link to="/inventory">GoTo Inventory</Link>
+                                
                                 </div>
+                                
                                 
 
                             </div>

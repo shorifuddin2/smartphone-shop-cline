@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import app from"../../firebase.init"
+import auth from"../../firebase.init"
 import Button from 'react-bootstrap/Button';
-import {signInWithEmailAndPassword,  createUserWithEmailAndPassword,getAuth, sendEmailVerification, sendPasswordResetEmail,signInWithPopup, GoogleAuthProvider} from "firebase/auth";
+import {signInWithEmailAndPassword,  createUserWithEmailAndPassword,getAuth, sendEmailVerification, sendPasswordResetEmail,signInWithPopup, GoogleAuthProvider, connectAuthEmulator} from "firebase/auth";
+import { computeHeadingLevel } from '@testing-library/react';
 
 
-const auth = getAuth();
 const Login = () => {
     const [validated, setValidated] = useState(false);
     const [registered, setRegistered] = useState(false);
@@ -106,11 +106,13 @@ const Login = () => {
             const token = credential.accessToken;
             // The signed-in user info.
             const user = result.user;
+            console.log(user)
             // ...
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
+            console.log(errorMessage)
             // The email of the user's account used.
             const email = error.email;
             // The AuthCredential type that was used.
