@@ -1,19 +1,13 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 
 
 const Inventory = () => {
-    // const { productId } = useParams();
-    // const [product] = useServiceDetail(productId);
-
+    
     return (
-        <div>
-            {/* <h2>You are about to book: {product.name}</h2>
-            <div className='text-center'>
-                <Link to={`/checkout/${productId}`}>
-                    <button className='btn btn-primary'>Update</button>
-                </Link>
-            </div> */}
+        <div className='m-5 '>
+            <Button to="/myItems">Manage Items</Button>
         </div>
     );
 };    

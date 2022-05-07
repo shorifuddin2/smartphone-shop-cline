@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import UseInventory2 from '../../hooks/UseInventory2';
+import UseProductUpdeate from '../../hooks/UseProductUpdeate';
 
 
 
@@ -24,6 +25,9 @@ const Produc2 = () => {
         }
     }
 
+    const { productId } = useParams();
+    const [product] = UseProductUpdeate(productId);
+
     return (
         <div>
             <Container>
@@ -40,7 +44,9 @@ const Produc2 = () => {
                                  <h2>Price : ${product.price}</h2>
                                  <div className='text-center my-2 update-button'>
                                 <Link className='p-2 bg-danger text-light' to=''onClick={() => handleDelete(product._id)}>Delete</Link>
-                                <Link className='p-2 bg-warning' to=''>Update</Link>
+                                <Link to={`/product/${productId}`}>
+                                    <button className='btn btn-primary'>Update</button>
+                                </Link>
                                 </div>
                             </div>
                         </Col>)
