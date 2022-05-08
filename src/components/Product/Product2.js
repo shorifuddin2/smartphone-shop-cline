@@ -6,13 +6,13 @@ import UseProductUpdeate from '../../hooks/UseUpdate';
 
 
 
-const Produc2 = () => {
+const Product2 = () => {
     const[inventory,setInventory] = UseInventory2();
 
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url = `http://localhost:5000/product2/${id}`;
+            const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -38,15 +38,15 @@ const Produc2 = () => {
                             <img className='w-50 img-fluid view overlay zoom' src={product.img}/>
                                  <h5 className='text-center'>Product : {product.name}</h5>
                                  <p>Supplier : {product.supplier}</p>
+                                 <h6>Price : ${product.price}</h6>
                                  <p>quantity : {product.quantity}</p>
                                  <p>Sold : {product.sold}</p>
-                                 <p>Description : {product.description.slice(0,100)}</p>
-                                 <h2>Price : ${product.price}</h2>
+                                 <p>Description : {product.description.slice(0,50)}</p>
                                  <div className='text-center my-2 update-button'>
-                                <Link className='p-2 bg-danger text-light' to=''onClick={() => handleDelete(product._id)}>Delete</Link>
+                                {/* <Link className='p-2 bg-danger text-light' to=''onClick={() => handleDelete(product._id)}>Delete</Link>
                                 <Link to={`/product${productId}`}>
                                     <button className='btn btn-primary'>Update</button>
-                                </Link>
+                                </Link> */}
                                 </div>
                             </div>
                         </Col>)
@@ -59,4 +59,4 @@ const Produc2 = () => {
     );
 };
 
-export default Produc2;
+export default Product2;

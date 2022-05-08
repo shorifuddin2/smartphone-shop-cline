@@ -38,9 +38,9 @@ const MyItems = () => {
                                  <p>Sold : {product.sold}</p>
                                  <p>Description : {product.description}</p>
                                  <h2>Price : ${product.price}</h2>
-
+                                 {/* <Button onClick={() => handleDelete(product._id)}>Delete</Button> */}
                                  <div className='text-center my-2 update-button'>
-                                <Link to="/inventory">GoTo Inventory</Link>
+                                <Link to="/inventory"> Go to Inventory</Link>
                                 
                                 </div>
                                 

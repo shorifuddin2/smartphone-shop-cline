@@ -1,56 +1,112 @@
-import { Button } from 'bootstrap';
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import UseInventory from '../../hooks/UseInventory';
 
+import React, { useEffect, useState } from 'react';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
+
+// inventory
 const Update = () => {
-    const[inventory,setInventory] = UseInventory();
+    const{id} = useParams();
+    const[resstock,setResstock] = useState(1);
+    const[service,setService] = useState({});
+    const stockinput = (event)=>{
+      setResstock(event.target.value)
+    }
+    const navigate = useNavigate();
 
-    const handleUpdate=(id)=>{
+    const stockbutton = ()=>{
+            console.log(resstock)
+          const quantity = resstock;
+      const product = {SupplierName : service.SupplierName,description:service.description,quantity : quantity,price : service.price,picture : service.picture,Brand : service.Brand};
+    
+   
+        const url =`http://localhost:5000/product/${id}`;
+        fetch(url,{
+            method : 'PUT',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.matchedCount > 0){
+            const url = `http://localhost:5000/product/${id}`;
+            fetch(url)
+            .then(res => res.json())
+            .then(data => setService(data));
+            
+          }
+        })
+    }
+    useEffect(()=>{
         const url = `http://localhost:5000/product/${id}`;
         fetch(url)
         .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            const remaining = inventory.map(product => product._id !== id);
-            setInventory(remaining);
-        })
+        .then(data => setService(data))
+        
+    },[id]);
+  const update = ()=>{
+      let quantity;
+      if(service.quantity > 0){
+        quantity = service.quantity -1
+      }
+      const product = {supplier : service.supplier,description:service.description,stock:service.stock,sold:service.sold,quantity : quantity,price : service.price,img : service.img,Brand : service.Brand};
+    
+   
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url,{
+            method : 'PUT',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(product)   
+        
+          })
+        .then(res => res.json())
+.then(data => {
+    if(data.matchedCount > 0){
+       
+             setService(data)
+        
     }
+})
 
 
-
+   
+  }
     return (
         <div>
             <Container>
                 <Row>
-                    {
-                        inventory.slice(0,1).map(product=><Col md="4" sm="12">
-                            <div className='cart-container text-center border border-primary my-5 Larger shadow rounded-3'>
-                            <img className='w-50 rounded mx-auto d-block' src={product.img}/>
-                                 <h5 className='text-center'>Product : {product.name}</h5>
-                                 <p>Supplier : {product.supplier}</p>
-                                 <p>quantity : {product.quantity}</p>
-                                 <p>Sold : {product.sold}</p>
-                                 <p>Description : {product.description.slice(0,100)}</p>
-                                 <h2>Price : ${product.price}</h2>
-                                 <div className='text-center my-2 update-button'>
-                                {/* <Link className='p-2 m-1 text-light btn btn-danger' to=''onClick={() => handleDelete(product._id)}>Delete</Link> */}
-                                {/* <Button onClick={() => handleDelete(product._id)}>Delete</Button> */}
-                                <Link to="/update">
-                                    <button className='btn btn-primary' onClick={()=>handleUpdate(product._id)}>Update</button>
-                                </Link>
-                                </div>
-                                <Link to="/addItems"><Button>ManageItem</Button></Link>
-                            </div>
-                        </Col>)
-                    }
+                    <Col md="3"></Col>
+                    <Col md="6">
+                    <Card className='mb-4'>
+                      <p>product id : {id}</p>
+  <Card.Img variant="top" src={service.picture} />
+  <Card.Body>
+    <Card.Title> brand : {service.Brand}</Card.Title>
+    <Card.Title style={{fontSize : '15px'}}> SupplierName : {service.SupplierName}</Card.Title>
+    <Card.Text>{service.description}</Card.Text>
+    <Card.Text>price is : {service.price}</Card.Text>
+    <h5 className='pb-2'>quantity : {service.quantity}</h5>
+    <Button variant="primary">delivered</Button>
+  </Card.Body>
+</Card>
+    </Col>
+                    
                 </Row>
             </Container>
-
-
+            <input onBlur={stockinput} type="number" name="" required id="" />
+            <button onClick={stockbutton} >Restock</button>
+            <Row>
+    <Col md="4"></Col>
+    <Col md="4" className='mx-auto'>
+    
+    </Col>
+  </Row>
         </div>
     );
 };
 
 export default Update;
+

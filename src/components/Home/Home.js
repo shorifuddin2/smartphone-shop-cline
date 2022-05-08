@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import UseInventory from '../../hooks/UseInventory';
 import Product from '../Product/Product';
 import Produc2 from '../Product/Product2';
+import Product2 from '../Product/Product2';
+
 
 
 // use hooks
@@ -52,7 +54,6 @@ const Home = () => {
                <Row>
                  <h2 className='web-title text-primary text-center py-5'>Inventory Items</h2>
                  <Product></Product>
-                 
                </Row>
               
            </Container>
@@ -68,8 +69,7 @@ const Home = () => {
                 />
              {/* <Row>
                  <h2 className='web-title text-primary text-center py-5'>Product Items</h2>
-                   <Produc2></Produc2>
-                 
+                  <Product2></Product2>
                </Row> */}
         </div>
     );

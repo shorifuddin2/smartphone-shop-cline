@@ -1,0 +1,51 @@
+[
+    {
+      "id": "624a953cb1b6ed0199b2fc1d",
+      "img": "http://placehold.it/32x32",
+      "ratting": 4,
+      "name": "Atif aslam",
+      "review": "its awesome bike"
+    },
+    {
+      "id": "624a953ce29e76dec81f71b7",
+      "img": "http://placehold.it/32x32",
+      "ratting": 5,
+      "name": "Simone Nolan",
+      "review": "its awesome bike"
+    },
+    {
+      "id": "624a953c89bb903564bdeba4",
+      "img": "http://placehold.it/32x32",
+      "ratting": 5,
+      "name": "Janna Martinez",
+      "review": "its awesome bike"
+    },
+    {
+      "id": "624a953c0b6838bd4c8ad2af",
+      "img": "http://placehold.it/32x32",
+      "ratting": 5,
+      "name": "Velma Mckee",
+      "review": "its awesome bike"
+    },
+    {
+      "id": "624a953c0f0b4fcba6c33496",
+      "img": "http://placehold.it/32x32",
+      "ratting": 5,
+      "name": "Stefanie Park",
+      "review": "its awesome bike"
+    },
+    {
+      "id": "624a953ccd9088946bcf6fea",
+      "img": "http://placehold.it/32x32",
+      "ratting": 5,
+      "name": "Velasquez Haley",
+      "review": "its awesome bike"
+    },
+    {
+      "id": "624a953cce92f4ce604ff4e1",
+      "img": "http://placehold.it/32x32",
+      "ratting": 4,
+      "name": "jahanara",
+      "review": "its awesome bike"
+    }
+  ]
