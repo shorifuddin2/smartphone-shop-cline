@@ -48,7 +48,7 @@ const Product = () => {
                     {
                         inventory?.slice(0, 6).map(product => <Col md="4" sm="12">
                             <div className='cart-container text-center border border-primary my-5 Larger shadow rounded-3'>
-                                <img className='w-50 rounded mx-auto d-block' src={product.img} />
+                                <img className='w-50 rounded mx-auto d-block Larger  shadow rounded-3' src={product.image} />
                                 <h5 className='text-center'>Product : {product.name}</h5>
                                 <p>Supplier : {product.supplier}</p>
                                 <p>quantity : {product.quantity}</p>

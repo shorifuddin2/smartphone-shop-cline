@@ -25,23 +25,25 @@ const AddItems = () => {
   };
     return (
         
-        <div className='w-50 mx-auto p-5 Larger shadow rounded-3 my-5'>
+        <div className='w-50 bg-danger mx-auto p-5 Larger shadow rounded-3 my-5'>
           <form onSubmit={handleSubmit(onSubmit)}>
-          <input className='w-100 p-2 my-2' {...register('name')}Placeholder="name" required/>
+          <input className='w-100 p-2 my-2 rounded-3' {...register('email')}Placeholder="email" required/>
           <br/>
-          <input className='w-100 p-2 my-2' {...register('price')} Placeholder="price" required/>
+          <input className='w-100 p-2 my-2 rounded-3' {...register('name')}Placeholder="name" required/>
           <br/>
-          <input className='w-100 p-2 my-2'{...register('sold')} Placeholder="Sold" required/>
+          <input className='w-100 p-2 my-2 rounded-3' {...register('price')} Placeholder="price" required/>
           <br/>
-          <input className='w-100 p-2 my-2'{...register('quantity')} Placeholder="Quantity" required/>
+          <input className='w-100 p-2 my-2 rounded-3'{...register('sold')} Placeholder="Sold" required/>
           <br/>
-          <input className='w-100 p-2 my-2'{...register('img' )} Placeholder="Image" required/>
+          <input className='w-100 p-2 my-2 rounded-3'{...register('quantity')} Placeholder="Quantity" required/>
           <br/>
-          <input className='w-100 p-2 my-2'{...register('delivery')} Placeholder="Delivery" required/>
+          <input className='w-100 p-2 my-2 rounded-3'{...register('image' )} Placeholder="Image" required/>
           <br/>
-          <input className='w-100 p-5 my-2'{...register('description' )} Placeholder="Description" required/>
+          <input className='w-100 p-2 my-2 rounded-3'{...register('delivery')} Placeholder="Delivery" required/>
           <br/>
-          <input className='text-primary my-3' type="submit" />
+          <input className='w-100 p-5 my-2 rounded-3'{...register('description' )} Placeholder="Description" required/>
+          <br/>
+          <input className='text-primary my-3 rounded-3 bg-info' type="submit" />
         </form>
         </div>
       );

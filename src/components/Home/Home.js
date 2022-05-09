@@ -67,6 +67,7 @@ const Home = () => {
                 src=" https://i.ibb.co/KDNwSsD/71810e1c-0ee7-11eb-8f7e-1b294b66658a.webp"
                 alt=""
                 />
+                
              {/* <Row>
                  <h2 className='web-title text-primary text-center py-5'>Product Items</h2>
                   <Product2></Product2>
