@@ -17,7 +17,7 @@ const Update = () => {
     const stockButton = ()=>{
           
    
-        const url =`http://localhost:5000/product/${id}`;
+        const url =`https://mysterious-ridge-40298.herokuapp.com/product/${id}`;
         fetch(url,{
             method : 'PUT',
             headers : {
@@ -28,7 +28,7 @@ const Update = () => {
         .then(res => res.json())
         .then(data => {
           if(data.matchedCount > 0){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://mysterious-ridge-40298.herokuapp.com/product/${id}`;
             fetch(url)
             .then(res => res.json())
             .then(data => setService(data));
@@ -37,14 +37,14 @@ const Update = () => {
         })
     }
     useEffect(()=>{
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://mysterious-ridge-40298.herokuapp.com/product/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setService(data))
         
     },[id]);
   const update = ()=>{
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://mysterious-ridge-40298.herokuapp.com/product/${id}`;
         fetch(url,{
             method : 'PUT',
             headers : {
