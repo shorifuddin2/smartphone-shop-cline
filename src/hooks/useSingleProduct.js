@@ -4,7 +4,7 @@ const useSingleProduct = (id) => {
     const[service,setService] = useState({});
 
     useEffect(()=>{
-        const url = `https://mysterious-ridge-40298.herokuapp.com/product/${id}`;
+        const url = `http://localhost:5000/product/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setService(data))

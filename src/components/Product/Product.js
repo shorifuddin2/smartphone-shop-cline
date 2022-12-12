@@ -11,7 +11,7 @@ const Product = () => {
 
     const[inventory,setInventory] = useState([]);
     useEffect(()=>{
-        fetch('https://mysterious-ridge-40298.herokuapp.com/product')
+        fetch('http://localhost:5000/product')
         .then(res=>res.json())
         .then(data=> setInventory(data));
     },[]);
@@ -21,7 +21,7 @@ const Product = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `https://mysterious-ridge-40298.herokuapp.com/product/${id}`;
+            const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

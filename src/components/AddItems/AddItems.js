@@ -9,7 +9,7 @@ const AddItems = () => {
     handleSubmit,
   } = useForm();
   const onSubmit = (data) =>{
-    const url = `https://mysterious-ridge-40298.herokuapp.com/product`
+    const url = `http://localhost:5000/product`
     fetch(url, {
       method : 'POST',
             headers : {

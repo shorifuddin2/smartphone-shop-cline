@@ -3,7 +3,7 @@
 
 * live website : https://smartphone-show-room-88deb.web.app/
 
-* Server side Website Link : https://mysterious-ridge-40298.herokuapp.com/
+* Server side Website Link : http://localhost:5000/
 
 
 * website firebase firebase hooks, bootstrap and ,react route add
