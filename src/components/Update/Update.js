@@ -17,7 +17,7 @@ const Update = () => {
     const stockButton = ()=>{
           
    
-        const url =`http://localhost:5000/product/${id}`;
+        const url =`https://smartphone-shop-server.onrender.com/product/${id}`;
         fetch(url,{
             method : 'PUT',
             headers : {
@@ -28,7 +28,7 @@ const Update = () => {
         .then(res => res.json())
         .then(data => {
           if(data.matchedCount > 0){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://smartphone-shop-server.onrender.com/product/${id}`;
             fetch(url)
             .then(res => res.json())
             .then(data => setService(data));
@@ -43,7 +43,7 @@ const Update = () => {
       // console.log(quantity)
       if (quantity > 0) {
           const quantityObj = { quantity };
-          const url = `http://localhost:5000/deliver/${id}`
+          const url = `https://smartphone-shop-server.onrender.com/deliver/${id}`
           console.log(url)
           fetch(url, {
               method: 'PUT',

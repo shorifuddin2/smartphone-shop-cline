@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const UseInventory2 = ()=>{
     const[inventory,setInventory] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/product2')
+        fetch('https://smartphone-shop-server.onrender.com/product2')
         .then(res=>res.json())
         .then(data=> setInventory(data));
     },[]);

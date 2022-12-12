@@ -9,7 +9,7 @@ const AddItems = () => {
     handleSubmit,
   } = useForm();
   const onSubmit = (data) =>{
-    const url = `http://localhost:5000/product`
+    const url = `https://smartphone-shop-server.onrender.com/product`
     fetch(url, {
       method : 'POST',
             headers : {
